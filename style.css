@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #FF6347, #FFA500);
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#fruit {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #FF6347, #FFA500);
+    color: #fff;
+    text-align: center;
+    width: 300px;
+}
+
+.suggestions {
+    list-style: none;
+    padding: 0;
+    background: linear-gradient(to bottom, #FF6347, #FFA500);
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 323px;
+    position: relative;
+    top: calc(100% + 10px); /* Positions drop down menu below search bar*/
+    left: 0;
+    display: none; /*Hides the drop down menu until you type*/
+    max-height: 150px;/
+    overflow-y: auto;
+}
+
+.suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.suggestions li:hover {
+    background: crimson;
+}
