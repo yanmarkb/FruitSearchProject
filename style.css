@@ -1,3 +1,9 @@
+/* Margin and Padding are set to 0 to remove any default margin and padding from the body elements.  
+
+I set display to flex to allow for easy centering.  Set justify-content adn align-items to center to center everything. 
+
+I set mine-hight to 100vh to ensure that the body element has a minimum height of 100% an to make sure the background gradient fills the entire view port. 
+*/
 body {
     margin: 0;
     padding: 0;
@@ -8,21 +14,38 @@ body {
     background: linear-gradient(to bottom, #FF6347, #FFA500);
 }
 
+/* I set position to relative so it parent container
+
+Added a bottom margin of 20px to create some space below the elements in this class
+*/
+
 .search-container {
     position: relative;
     margin-bottom: 20px;
 }
-
+/* 
+Added 10px to padding.
+Set the font size to 16px
+Removed the border and rounded the corners for aesthetic purposes.
+Applies the same gradient background as the body.
+Set text to white
+Centered the text
+Set a fixed width to the input field.
+*/
 #fruit {
     padding: 10px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     background: linear-gradient(to bottom, #FF6347, #FFA500);
-    color: #fff;
+    color: white;
     text-align: center;
     width: 300px;
 }
+
+/* 
+This makes the drop down menu for a suggestion bar and made it match the style of the rest of the project. Positioned it correctly. Hides drop down menu when nothing is typed.
+*/
 
 .suggestions {
     list-style: none;
@@ -35,9 +58,15 @@ body {
     top: calc(100% + 10px); /* Positions drop down menu below search bar*/
     left: 0;
     display: none; /*Hides the drop down menu until you type*/
-    max-height: 150px;/
+    max-height: 150px;
     overflow-y: auto;
 }
+
+/* 
+Added padding
+Made the cursor change to a pointer when hovering over suggestions
+Added transition for hover effect
+*/
 
 .suggestions li {
     padding: 10px;
@@ -45,6 +74,9 @@ body {
     transition: background 0.3s;
 }
 
+/* 
+Makes it so there is a focus effect when hovering over text
+*/
 .suggestions li:hover {
     background: crimson;
 }
